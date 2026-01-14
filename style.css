@@ -1,0 +1,166 @@
+
+/* ===== Global ===== */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Poppins", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #111 0%, #000 70%);
+  color: white;
+}
+
+/* ===== Headings ===== */
+h1{
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+h2{
+  font-size: 1.2rem;
+  opacity: 0.85;
+  margin-bottom: 2rem;
+}
+
+/* ===== Game Layout ===== */
+.btn-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.line-one,
+.line-two{
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* ===== Buttons ===== */
+.btn{
+  height: 180px;
+  width: 180px;
+  border-radius: 24px;
+  cursor: pointer;
+
+  /* Glassmorphism */
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.25);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.6),
+    inset 0 0 0 rgba(255,255,255,0.2);
+
+  transition: all 0.15s ease-in-out;
+}
+
+/* Hover */
+.btn:hover{
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+}
+
+/* ===== Color Themes ===== */
+.red{
+  background: linear-gradient(135deg,#ff5f5f,#b30000);
+}
+
+.yellow{
+  background: linear-gradient(135deg,#f9e547,#b7950b);
+}
+
+.green{
+  background: linear-gradient(135deg,#2ecc71,#0b6623);
+}
+
+.blue{
+  background: linear-gradient(135deg,#3498db,#0a3d62);
+}
+
+/* ===== Game Effects ===== */
+.flash{
+  box-shadow: 0 0 50px white;
+  filter: brightness(1.6);
+  transform: scale(1.05);
+}
+
+.userflash{
+  box-shadow: 0 0 50px #00fff7;
+  filter: brightness(1.4);
+  transform: scale(0.95);
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px){
+  .btn{
+    height: 130px;
+    width: 130px;
+  }
+
+  h1{
+    font-size: 2rem;
+  }
+
+  h2{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px){
+  .btn{
+    height: 110px;
+    width: 110px;
+    border-radius: 18px;
+  }
+
+  .line-one,
+  .line-two{
+    gap: 1rem;
+  }
+}
+
+
+.game-over{
+  background:
+    radial-gradient(circle at center, rgba(255,0,0,0.35), transparent 60%),
+    linear-gradient(135deg, #120000, #000) !important ;
+}
+
+
+.shake{
+  animation: shake 0.25s linear 2;
+}
+
+@keyframes shake{
+  0%{ transform: translateX(0); }
+  25%{ transform: translateX(-6px); }
+  50%{ transform: translateX(6px); }
+  75%{ transform: translateX(-6px); }
+  100%{ transform: translateX(0); }
+}
+
+
+/* ===== Smooth Restart ===== */
+.restart{
+  animation: restartFade 0.4s ease;
+}
+
+@keyframes restartFade{
+  0%{
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
