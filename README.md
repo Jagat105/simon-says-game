@@ -4,7 +4,7 @@ A fun and interactive **Simon Says memory game** built using **HTML, CSS, and Ja
 Test your memory by repeating the correct color sequence as it gets harder level by level!
 
 ## 🚀 Live Demo
-👉 (Add your GitHub Pages link here)
+👉 https://jagat105.github.io/simon-says-game/
 
 ## 🛠️ Tech Stack
 - HTML
@@ -25,8 +25,4 @@ Test your memory by repeating the correct color sequence as it gets harder level
 4. Each level adds one new color
 5. Wrong click = Game Over 😄
 
-## 📷 Preview
-(Add screenshot here)
-
----
 Made with ❤️ by Jagat
