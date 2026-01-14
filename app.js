@@ -71,6 +71,12 @@ function checkBtn(idx){
 
 
 function btnPress(){
+    if(started === false){
+        started = true;
+        levelUp();
+        return;
+    };
+
     let btn = this;
     userFlash(btn);
 
@@ -101,4 +107,4 @@ function smoothRestart(){
     setTimeout(() => {
         document.body.classList.remove("restart");
     }, 400);
-};
+}
